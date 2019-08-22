@@ -227,7 +227,7 @@ public class AppointmentMapper {
 
     private Map createPatientMap(Patient p) {
         Map map = new HashMap();
-        map.put("name", p.getPersonName().getFullName());
+        map.put("name", p.getPersonName().getFamilyName()+" "+p.getPersonName().getGivenName());
         map.put("uuid", p.getUuid());
         map.put("identifier", p.getPatientIdentifier().getIdentifier());
         return map;
